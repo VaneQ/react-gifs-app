@@ -1,13 +1,17 @@
 import { useFectchGifs } from "../hooks/useFetchGifs";
 import { GifGridItem } from "./GifGridItem";
 
-export const GifGrid = ({ category }) => {
+export const GifGrid = ({ category, onDeleteCat }) => {
 
     const { data:images, loading } = useFectchGifs( category );
 
+    const handleDeleteCategory = (e) => {
+        onDeleteCat(e.target.textContent)
+    }
+
     return (
-        <>
-            <h3 className="card animate__animated animate__fadeIn">{ category }</h3>
+        <div className="grid-container">
+            <h3 onClick={ handleDeleteCategory } className="card label-category card-category animate__animated animate__fadeIn">{ category }</h3>
 
             { loading && <p className="card animate__animated animate__flash">Loading</p> }
 
@@ -18,7 +22,7 @@ export const GifGrid = ({ category }) => {
                     ))
                 }
             </div>
-        </>
+        </div>
         
     )
 }

@@ -4,12 +4,29 @@
 
 body {
   padding: 60px;
+  background-color: #708090;
 }
 
 input {
   font-size: 1.2rem;
   width: 100%;
-  color: grey;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  background:#DCDCDC;
+  outline: none;
+}
+
+.category-form{
+  width: 270px;
+  justify-content: flex-start
+}
+
+.grid-container {
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
 }
 
 .card-grid{
@@ -26,6 +43,8 @@ input {
   margin-bottom: 10px;
   margin-right: 10px;
   overflow: hidden;
+  text-align: center;
+  width: 150px;
 }
 
 .card p {
@@ -35,4 +54,38 @@ input {
 
 .card img{
   max-height: 170px;
+}
+
+.card-category {
+  background-color: #DCDCDC;
+  border:none;
+  font-size: 1.5rem;
+} 
+
+.card-category-p {
+  font-size: 3rem;
+}
+
+.card-item{
+  color:white;
+  border: none;
+}
+
+.appHeader{
+  font-size: 2.5rem;
+  color: white;
+}
+
+.spanHeader {
+  color: black;
+}
+
+.label-category{
+  cursor: pointer;
+}
+
+@media (min-width:780px) {
+    .category-form{
+      width: 400px;
+    }
 }
